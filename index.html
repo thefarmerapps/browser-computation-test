@@ -4,22 +4,28 @@
 </h1>
 
 <script>
-
-  for(var i = 0 ; i < 5; i++) {
   
-    var j = 0;
-    
-    while(j++ < 50000) {}
-    
-    i++;
-    
-    console.log(i);
-    
-    document.getElementById('h1').innerHTML = `${document.getElementById('h1').innerHTML}<br>${i}`;
+  var result = 0;
   
-  }
+  var baseNumber = 8;
   
-
+  var startDate = new Date();
+  
+  for (var i = Math.pow(baseNumber, 7); i >= 0; i--) {		
+		result += Math.atan(i) * Math.tan(i);
+    
+    const middleDate = new Date();
+    
+    const computingTime = middleDate - startDate;
+    
+    document.getElementById('h1').innerHTML = `${document.getElementById('h1').innerHTML}<br>${result} - ${computingTime}`;
+	}
+  
+  var endDate = new Date();
+  
+  const timeNeeded = endDate - startDate;
+  
+  document.getElementById('h1').innerHTML = `${document.getElementById('h1').innerHTML}<br>Took ${timeNeeded} MS`;
 
 </script>
 
