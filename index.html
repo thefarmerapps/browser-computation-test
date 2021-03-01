@@ -5,7 +5,19 @@
 
 <script>
 
-document.getElementById('h1').html = 'ABC';
+  for(var i = 0 ; i < 5; i++) {
+  
+    var j = 0;
+    
+    while(j++ < 50000) {}
+    
+    i++;
+    
+    document.getElementById('h1').innerHTML = `${document.getElementById('h1').innerHTML}\n${i}`;
+  
+  }
+  
+
 
 </script>
 
