@@ -1,47 +1,45 @@
 <head>
 
-<h1 id="h1">
-</h1>
-
-<script>
-	
-	
-	var promise = new Promise(function(resolve, reject) {
-  // do a thing, possibly async, then…
-
- 
+    <h1 id="h1">
+    </h1>
+    
+    <script>
+        
+        
+        var promise = new Promise(function(resolve, reject) {
+      // do a thing, possibly async, then…
+    
+     
+          
+          var result = 0;
       
-      var result = 0;
-  
-  var baseNumber = 3;
-  
-  var startDate = new Date();
-  
-  for (var i = Math.pow(baseNumber, 7); i >= 0; i--) {		
-		result += Math.atan(i) * Math.tan(i);
-    
-    const middleDate = new Date();
-    
-    const computingTime = middleDate - startDate;
-    
-    document.getElementById('h1').innerHTML = `${document.getElementById('h1').innerHTML}<br>${result} - ${computingTime}`;
-	}
-  
-  var endDate = new Date();
-  
-  const timeNeeded = endDate - startDate;
-  
-  document.getElementById('h1').innerHTML = `${document.getElementById('h1').innerHTML}<br>Took ${timeNeeded} MS`;
+      var baseNumber = 3;
       
-    resolve("Stuff worked!");
-  }
-  else {
-    reject(Error("It broke"));
-  }
-});
-	
-  
+      var startDate = new Date();
+      
+      for (var i = Math.pow(baseNumber, 7); i >= 0; i--) {		
+            result += Math.atan(i) * Math.tan(i);
+        
+        const middleDate = new Date();
+        
+        const computingTime = middleDate - startDate;
+        
+        document.getElementById('h1').innerHTML = `${document.getElementById('h1').innerHTML}<br>${result} - ${computingTime}`;
+        }
+      
+      var endDate = new Date();
+      
+      const timeNeeded = endDate - startDate;
+      
+      document.getElementById('h1').innerHTML = `${document.getElementById('h1').innerHTML}<br>Took ${timeNeeded} MS`;
+          
+        resolve("Stuff worked!");
 
-</script>
-
-</head>
+    });
+        
+      
+    
+    </script>
+    
+    </head>
+    
